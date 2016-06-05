@@ -1,0 +1,4 @@
+FROM cleanify
+MAINTAINER Scott Brown
+COPY ./config/config_cleanify.rb /root/config/
+ENTRYPOINT ["ruby","cleanify.rb"]
