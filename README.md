@@ -9,11 +9,11 @@ Based on (http://aleung.github.io/blog/2013/03/22/clean-aged-artifacts-from-arti
 * Add the —-delete-files parameter when running to perform actual file deletion of the listed files. Use caution when doing this. When a file is deleted its direct parent directory is also deleted along with any artifacts inside it. Isolating directories to avoid leaving empty folders laying around is tricky business, this is an attempt at partially solving this problem. 
 * You may need to perform some maintance tasks such as empty trash in Artifactory if you want to see your cleaning results right away
 
-## Docker:
+## Docker Usage:
 * In the docker folder there are some scripts to build docker images/containers of the code. See the README.md in there.
 
 ## Configuration:
-* The default configuration is set up to work with the artifactory docker image mentioned below. This should make it easy to get started. You'll need to delete a line in run.sh to enable linking the cleanify container to the artifactory container.
+* The default configuration is set up to work with the artifactory docker image mentioned below. This should make it easy to get started. You'll need to delete a line in the run scripts to enable linking the cleanify container to the artifactory container.
 * The file config_cleanify.rb holds a number of configurable options such as artifactory URL and port, which repo to list/delete from, age of artifacts to delete, name of keepers file and more
 * The keepers file (keepers.txt by default) contains the name of artifacts that will not be deleted. Any file path that contains the value of a line in the keepers file will be kept. This file also trims spaces and allows a comment after each line beginning with #.
 
