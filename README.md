@@ -1,6 +1,6 @@
 # Cleanify
 
-Lists and deletes artifacts that haven't been downloaded for a while and aren’t contained in the keepers.txt file.
+Lists and deletes Artifactory artifacts that haven't been downloaded for a while and aren’t in the exclusions file.
 
 Based on (http://aleung.github.io/blog/2013/03/22/clean-aged-artifacts-from-artifactory/). Expanded with the keepers file, lots of refactoring, some output to make it more user friendly, read-only mode, and more!
 
