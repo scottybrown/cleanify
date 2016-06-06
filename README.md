@@ -10,7 +10,7 @@ Based on (http://aleung.github.io/blog/2013/03/22/clean-aged-artifacts-from-arti
 ## Usage:
 * Simply run as ./cleanify.rb - this will list artifacts uploaded or downloaded older than the age specified which aren’t in keepers.txt
 * Add the —-delete-files parameter when running to perform actual file deletion of the listed files. Use caution when doing this. When a file is deleted its direct parent directory is also deleted along with any artifacts inside it. Isolating directories to avoid leaving empty folders laying around is tricky business, this is an attempt at partially solving this problem. 
-* You may need to perform some maintance tasks such as empty trash in Artifactory if you want to see your cleaning results right away
+* You may need to perform some maintenance tasks such as empty trash in Artifactory if you want to see your cleaning results right away
 
 ## Configuration:
 * The default configuration is set up to work with the artifactory docker image mentioned below. This should make it easy to get started. You'll need to delete a line in the run scripts to enable linking the cleanify container to the artifactory container.

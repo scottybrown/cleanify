@@ -1,3 +1,0 @@
-# helpful comment on why these files are to be kept
-<some-file>
-<some-folder>/<some-other-file>

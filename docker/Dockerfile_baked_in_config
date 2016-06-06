@@ -1,4 +1,5 @@
-FROM cleanify
+FROM nauraushaun/cleanify
 MAINTAINER Scott Brown
-COPY ./config/config_cleanify.rb /root/config/
+COPY config /root/config
+COPY keepers /root/keepers
 ENTRYPOINT ["ruby","cleanify.rb"]

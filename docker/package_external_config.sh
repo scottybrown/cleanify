@@ -2,7 +2,7 @@
 # To run the resulting image, use run_external_config.sh
 
 BUILD_VERSION=${1-"latest"}
-CLEANIFY_IMAGE_NAME=cleanify:$BUILD_VERSION
+CLEANIFY_IMAGE_NAME=nauraushaun/cleanify:$BUILD_VERSION
 DOCKERFILE=Dockerfile_external_config
 WD=$(pwd)
 
@@ -13,3 +13,5 @@ docker build -t $CLEANIFY_IMAGE_NAME --file $DOCKERFILE .
 rm -rf $DOCKERFILE .dockerignore
 cd $WD
 echo ""
+
+docker push $CLEANIFY_IMAGE_NAME

@@ -17,7 +17,7 @@ $password = 'password'
 
 $delete_files_parameter_name = "--delete-files"
 $delete_files = ARGV[0] == $delete_files_parameter_name
-$keepers_file_name = "keepers.txt"
+$keepers_file_name = "keepers/keepers.txt"
 
 # obtained from patorjk.com/software/taag/#p=display&h=0&v=0&f=Shadow&t=CLEANIFY
 # replaced all back-slashes with double back-slashes so they aren't escaped

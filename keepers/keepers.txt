@@ -1,0 +1,2 @@
+# Any file whose path contains text mentioned here will not be deleted
+projec
