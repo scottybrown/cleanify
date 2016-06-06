@@ -2,3 +2,5 @@
 - To run this image using the config file in the project use run_external_config.sh
 - To build an image with the config baked in use package_baked_in_config.sh (after running package_external_config.sh)
 - To run this image use run_baked_in_config.sh
+
+Feel free to use these scripts as the basis for your own containers and Dockery fun :)
