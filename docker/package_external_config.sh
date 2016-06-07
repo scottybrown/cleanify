@@ -7,10 +7,8 @@ DOCKERFILE=Dockerfile_external_config
 WD=$(pwd)
 
 echo "Building cleanify base image, no config"
-cp $DOCKERFILE .dockerignore ../
 cd ../
 docker build -t $CLEANIFY_IMAGE_NAME --file $DOCKERFILE .
-rm -rf $DOCKERFILE .dockerignore
 cd $WD
 echo ""
 

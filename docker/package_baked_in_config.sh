@@ -7,8 +7,12 @@ DOCKERFILE=Dockerfile_baked_in_config
 WD=$(pwd)
 
 echo "Building cleanify child image, with config baked in"
-cp $DOCKERFILE ../
 cd ../
+# temporarily remove dockerignore file so we can include keepers and config
+DOCKERIGNORE_CONTENTS=$(cat .dockerignore)
+echo $DOCKERIGNORE_CONTENTS
+rm -rf .dockerignore
 docker build --file $DOCKERFILE -t $CLEANIFY_BAKED_CONFIG_IMAGE_NAME .
-rm -rf $DOCKERFILE
+echo $DOCKERIGNORE_CONTENTS > .dockerignore
+
 cd $WD
