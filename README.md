@@ -9,12 +9,13 @@ Based on (http://aleung.github.io/blog/2013/03/22/clean-aged-artifacts-from-arti
 * Where the config folder contains a script called config_cleanify.rb. The basis for this script should be taken from the Github project (https://github.com/scottybrown/cleanify/blob/master/config/config_cleainfy.rb)
 * The Github project also contains some scripts that build and run a container with config pre-baked in. These may be of interest to you. See README.md in the docker folder.
 
-* Running will default to dry-run mode with no deletion. Add "--delete-files" when running to actually delete things, use caution here!
-* You may need to perform some maintenance tasks such as empty trash in Artifactory if you want to see your cleaning results right away
-* When a file is deleted its direct parent directory is also deleted along with any artifacts inside it. Isolating directories to avoid leaving empty folders laying around is tricky business, this is an attempt at partially solving this problem. 
-
 ## Non-Docker Usage:
 * Run as ./cleanify.rb - this will list artifacts uploaded or downloaded older than the age specified which aren’t in keepers.txt
+
+## Usage Tips
+* Running will default to dry-run mode with no deletion. Add "--delete-files" when running to actually delete things, use caution here!
+* You may need to perform some maintenance tasks such as empty trash in Artifactory if you want to see your cleaning results right away
+* When a file is deleted its direct parent directory is also deleted along with any artifacts inside it. Isolating directories to avoid leaving empty folders laying around is tricky business, this is an attempt at partially solving this problem.
 
 ## Configuration:
 * The default configuration is set up to work with the artifactory docker image mentioned below. This should make it easy to get started. You'll need to link your Cleanify container to your Artifactory container though, the run scripts in the Docker folder show how this is done.
