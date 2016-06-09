@@ -1,4 +1,4 @@
-# Cleanify
+# Cleanify 
 
 Lists and deletes Artifactory artifacts that haven't been downloaded for a while and aren’t in the exclusions file.
 
